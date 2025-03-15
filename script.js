@@ -49,8 +49,12 @@ function RandomElements(){
     food.classList.add('food');
 
     // random position and color
-    let leftPos = Math.floor(Math.random() * (window.innerWidth - 25));
-    let topPos = Math.floor(Math.random() * (window.innerHeight -  25));
+// Define a margin to prevent food from spawning at the edges
+let margin = 10; 
+
+let leftPos = Math.floor(Math.random() * (window.innerWidth - 2 * margin)) + margin;
+let topPos = Math.floor(Math.random() * (window.innerHeight - 2 * margin)) + margin;
+
 
     let r = Math.floor(Math.random() * 256);
     let g = Math.floor(Math.random() * 256);
